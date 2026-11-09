@@ -1,0 +1,5 @@
+---
+title: 文章归档
+permalink: /archive/
+---
+<section class="reading"><p class="eyebrow">THE ARCHIVE</p><h1>文章归档</h1>{% for category in site.categories %}<h2>{{ category[0] | escape }}</h2>{% for post in category[1] %}<p><time>{{ post.date | date: '%Y.%m.%d' }}</time> <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></p>{% endfor %}{% endfor %}</section>

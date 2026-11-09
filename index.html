@@ -1,0 +1,7 @@
+---
+layout: default
+---
+<section class="hero"><p class="eyebrow">NOTES ON LIFE & TECHNOLOGY</p><h1>把想法写下来，<br>让时间留下痕迹<span>。</span></h1><p>{{ site.description | escape }}</p><a href="#articles">开始阅读 ↓</a><div class="stamp" aria-hidden="true">记录<br>日常</div></section>
+<section id="articles"><div class="section-heading"><h2>最新文章</h2><span>{{ site.posts.size }} 篇记录</span></div>
+{% for post in site.posts %}<a class="post-row" href="{{ post.url | relative_url }}"><time>{{ post.date | date: '%Y.%m.%d' }}</time><div><p class="meta">{{ post.categories | join: ' / ' | escape }}</p><h3>{{ post.title | escape }}</h3><p>{{ post.excerpt | strip_html | truncate: 110 | escape }}</p></div><span class="arrow">↗</span></a>{% endfor %}
+</section>

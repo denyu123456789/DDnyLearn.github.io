@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<article class="reading">
+  <a class="back" href="{{ '/' | relative_url }}">← 所有文章</a>
+  <p class="meta">{{ page.date | date: '%Y.%m.%d' }} / {{ page.categories | join: ' · ' | escape }}</p>
+  <h1>{{ page.title | escape }}</h1>
+  <div class="prose">{{ content }}</div>
+</article>
