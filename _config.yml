@@ -1,0 +1,19 @@
+title: 慢慢记录
+description: 关于技术、生活，以及路上的想法。
+lang: zh-CN
+timezone: Asia/Shanghai
+url: "https://denyu123456789.github.io"
+baseurl: "/DDnyLearn.github.io"
+permalink: /posts/:title/
+markdown: kramdown
+exclude: [README.md, Gemfile, Gemfile.lock]
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
